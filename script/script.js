@@ -6,11 +6,11 @@ let userAge = parseInt(prompt(`Inserisci la tua età:`));
 let tripPrice = userKm * kmPrice;
 console.log(`Costo del viaggio: ${tripPrice.toFixed(2)}€;`);
 
-if (userAge <= 18 || userAge >= 65) {
+if (userAge < 18 || userAge >= 65) {
   console.log(`Hai diritto ad uno sconto;`);
   let tripDiscounted;
 
-  if(userAge <= 18) {
+  if(userAge < 18) {
     console.log(`Sconto applicabile del: 20%;`)
     tripDiscounted = (tripPrice / 100) * 80;
   }
